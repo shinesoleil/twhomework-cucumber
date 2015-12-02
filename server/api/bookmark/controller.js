@@ -5,12 +5,18 @@ exports.index = function(req, res) {
         if(err) {
             console.error(err);
         }
-        res.send(bookmarks);
+        res.json(bookmarks);
     });
 };
 
 exports.insert = function(req, res) {
-    var newBookmark = req.body;
+    var newBookmarkName = req.query.name;
+    var newBookmarkAddress = req.query.address;
+    var newBookmark = {
+        "title": newBookmarkName,
+        "created": newBookmarkAddress
+    }
+    console.log(newBookmark);
     bookmark.create(newBookmark, function(err, bookmarks) {
         if(err) {
             console.error(err);
@@ -20,7 +26,7 @@ exports.insert = function(req, res) {
 };
 
 exports.remove = function(req, res) {
-    var _idBookmarkToBeDeleted = req.params.id;
+    var _idBookmarkToBeDeleted = req.query.id;
     bookmark.remove({_id: _idBookmarkToBeDeleted}, function(err, bookmarks) {
         if(err) {
             console.error(err);

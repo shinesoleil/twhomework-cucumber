@@ -6,6 +6,6 @@ var router = express.Router();
 
 router.get('/', controller.index);
 router.post('/', controller.insert);
-router.delete('/:id', controller.remove);
+router.delete('/', controller.remove);
 
 module.exports = router;

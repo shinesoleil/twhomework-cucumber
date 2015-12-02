@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>homework js</title>
+    <link rel="stylesheet" type="text/css"  href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css"  href="libs/jquery-ui/jquery-ui.min.css">
+</head>
+<body>
+
+    <div id="inputDiv">
+        <input id="input">
+    </div>
+
+    <input id="addButton" type="button" value="Add">
+
+    <div id="content"></div>
+
+    <div id="dialog-add" title="Add Bookmark">
+        <form>
+            <label for="newBookmarkName">Name</label>
+            <input type="text" name="name" id="newBookmarkName" class="text ui-widget-content ui-corner-all">
+            <label for="newBookmarkAddress">Address</label>
+            <input type="text" name="address" id="newBookmarkAddress" class="text ui-widget-content ui-corner-all">
+        </form>
+    </div>
+
+    <div id="dialog-delete" title="Delete Bookmark">
+        <p>Are you sure?</p>
+    </div>
+
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="src/index.js"></script>
+    <script src="src/convertTime.js"></script>
+    <script src="src/renderList.js"></script>
+    <script src="src/filterBookmarks.js"></script>
+    <script src="src/widgets/button-add.js"></script>
+    <script src="src/widgets/button-delete.js"></script>
+    <script src="src/widgets/dialog-add.js"></script>
+    <script src="src/widgets/dialog-delete.js"></script>
+</body>
+</html>
