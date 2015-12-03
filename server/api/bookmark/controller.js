@@ -15,7 +15,7 @@ exports.insert = function(req, res) {
     var newBookmark = {
         "title": newBookmarkName,
         "created": newBookmarkAddress
-    }
+    };
     console.log(newBookmark);
     bookmark.create(newBookmark, function(err, bookmarks) {
         if(err) {
@@ -26,7 +26,8 @@ exports.insert = function(req, res) {
 };
 
 exports.remove = function(req, res) {
-    var _idBookmarkToBeDeleted = req.query.id;
+    var _idBookmarkToBeDeleted = req.query._id;
+    console.log(_idBookmarkToBeDeleted);
     bookmark.remove({_id: _idBookmarkToBeDeleted}, function(err, bookmarks) {
         if(err) {
             console.error(err);

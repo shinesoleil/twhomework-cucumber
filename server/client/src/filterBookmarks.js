@@ -9,10 +9,13 @@ function filterBookmarks(bookmarks) {
 
         function appendToPage(article) {
             var highlightedText = article.title.replace(regExp, '<span class="highlight">$&</span>');
-            renderArticle(highlightedText, convertTime(article.created + "000"));
+            renderArticle(highlightedText, convertTime(article.created + "000"), article._id);
         }
 
         $("#content").html(""); //clear all contents
         bookmarks.filter(filterByWord).map(appendToPage);
+        var defered2 = $.Deferred();
+        defered2.done(deleteWidget());
     });
+
 }

@@ -8,9 +8,12 @@
 * use cucumber for the test 
 
 ### client side
-* project structure
+(temporarily use bookmarks.json of last homework)
+
+* improve project structure
 * pagination
-* delete button
+* delete button bugs
+* css
 
 ### server side
-* done
+* done, to be reviewed
