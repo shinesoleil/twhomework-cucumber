@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var bookmarkSchema = mongoose.Schema({
-    title: String,
-    created: String
+    name: String,
+    address: String
 });
 
 module.exports = mongoose.model('bookmark', bookmarkSchema);

@@ -1,8 +1,8 @@
-function renderArticle(title, time, _id) {
+function renderArticle(name, address, _id) {
     $("#content")
         .append('<div class="bookmark">' +
-        '<p class="phrase">' + title + '</p>' +
-        '<span class="timestamp">Created @ ' + time + '</span>' +
+        '<p class="phrase">' + name + '</p>' +
+        '<span class="timestamp">' + address + '</span>' +
         '<input id=' + _id + ' class="deleteButton" type="button" value="Delete">' +
         '</div>' +
         '<hr>');
@@ -10,10 +10,8 @@ function renderArticle(title, time, _id) {
 
 function renderList(bookmarks) {
     bookmarks.forEach(function(element) {
-        renderArticle(element.title, convertTime(element.created + "000"), element._id);
+        renderArticle(element.name, element.address, element._id);
     });
     var defered = $.Deferred();
-    defered
-        .done($("#input").val(""))
-        .done(deleteWidget());
+    defered.done(deleteWidget());
 }

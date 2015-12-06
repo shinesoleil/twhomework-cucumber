@@ -18,7 +18,7 @@ function deleteWidget() {
                                 url: "http://localhost:8080/api/bookmarks" + "?_id=" + _idBookmarkToBeDeleted,
                                 type: 'DELETE',
                                 success: function(data) {
-                                    renderPage();
+                                    refresh();
                                 }
                             });
                             $(this).remove();

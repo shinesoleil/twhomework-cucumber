@@ -1,5 +1,4 @@
 # homework cucumber
-*** 
 
 ## TODO：
 
@@ -8,12 +7,13 @@
 * use cucumber for the test 
 
 ### client side
-(temporarily use bookmarks.json of last homework)
+(bookmarks.json: name and email)
 
 * improve project structure
-* pagination
 * delete button bugs
 * css
 
 ### server side
 * done, to be reviewed
+
+

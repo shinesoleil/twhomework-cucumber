@@ -21,7 +21,7 @@ function addWidget() {
                             var newBookmarkAddress = $("#newBookmarkAddress").val();
                             $.post("http://localhost:8080/api/bookmarks" + "?name=" + newBookmarkName + "&address=" + newBookmarkAddress
                                 , function(data) {
-                                    renderPage();
+                                    refresh();
                                 });
                             $(this).remove();  //bug
                         }
