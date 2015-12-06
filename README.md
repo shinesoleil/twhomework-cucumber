@@ -2,22 +2,22 @@
 
 ## TODO：
 
-### project
+#### project
 * use gulp to manage tasks 
 * use cucumber for the test 
 
-### client side
+#### client side
 (bookmarks.json: name and email)
 
 * css
 * improve project structure
 * find and fix bugs
 
-### server side
+#### server side
 * done, to be reviewed
 
 
-## Usage
+## Usage:
 
 1. You need to have NodeJS, MongoDB installed on your machine;
 2. In the home directory, run npm command to install dependencies:
