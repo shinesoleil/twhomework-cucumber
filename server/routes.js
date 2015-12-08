@@ -8,10 +8,10 @@ module.exports = function(app) {
         extended:true
     }));
 
-    app.use(express.static(__dirname + '/client'));
+    app.use(express.static(__dirname + '/../client'));
 
     app.use('/page', function(req, res) {
-       res.sendFile(path.join(__dirname + '/client/index.html'));
+       res.sendFile(path.join(__dirname + '/../client/index.html'));
     });
     app.use('/api/bookmarks', require('./api/bookmark/index'));
 };
