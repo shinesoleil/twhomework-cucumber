@@ -1,20 +1,10 @@
-# homework cucumber
+# Homework - Cucumber
 
-## TODO：
-
-#### project
-* use gulp to manage tasks 
-* use cucumber for the test 
-
-#### client side
-(bookmarks.json: name and email)
-
-* improve project structure
-* pagination bugs
-
-#### server side
-* done, to be reviewed
-
+##This is a bookmarks management web application working with full-stack JavaScript:
+* client-side: jQuery
+* server-side: Express.js
+* database: MongoDB
+* test: Cucumber.js
 
 ## Usage:
 
@@ -28,5 +18,26 @@
 4. Open the following webpage:
 > http://localhost:8080/page
 
-5. **TODO:** *run cucumber*
+5. Go to "test" folder and rum the folowing command to test the application:
+> cucumber.js
+
+## TODO：
+
+#### project
+* use gulp to manage tasks 
+
+#### client side
+(bookmarks.json: name and email)
+
+* improve project structure
+* pagination bugs
+
+#### server side
+* done, to be reviewed
+
+#### test with cucumber
+* test add bookmark
+* test delete bookmark
+
+
 
