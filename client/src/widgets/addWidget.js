@@ -13,24 +13,33 @@ function addWidget() {
             $(addDialogHtml).appendTo(document.body);
 
             $("#dialog-add").dialog({
+                close: function() {
+                    $(this).remove();
+                },
                 buttons: [
                     {
                         text:"Add",
                         click: function() {
                             var newBookmarkName = $("#newBookmarkName").val();
                             var newBookmarkAddress = $("#newBookmarkAddress").val();
-                            $.post("http://localhost:8080/api/bookmarks" + "?name=" + newBookmarkName + "&address=" + newBookmarkAddress
-                                , function(data) {
-                                    refresh();
-                                });
-                            $(this).remove();  //bug
+
+                            if(newBookmarkName == "" || newBookmarkAddress == "") {
+                                $("#errorAdd").remove();
+                                $("#dialog-add").append('<p id="errorAdd">Error: Please insert bookmarks name/address</p>');
+                            }
+                            else {
+                                $("#errorAdd").remove();
+                                $.post("http://localhost:8080/api/bookmarks" + "?name=" + newBookmarkName + "&address=" + newBookmarkAddress
+                                    , function(data) {
+                                        refresh();
+                                    });
+                                $(this).remove();
+                            }
                         }
                     }
                 ]
             });
             event.preventDefault(); //???
     });
-
-
 }
 

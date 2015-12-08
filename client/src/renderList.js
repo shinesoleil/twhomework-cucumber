@@ -1,8 +1,8 @@
 function renderArticle(name, address, _id) {
     $("#content")
         .append('<div class="bookmark">' +
-        '<p class="phrase">' + name + '</p>' +
-        '<span class="timestamp">' + address + '</span>' +
+        '<span class="bookmarkName">' + name + '</span>' +
+        '<span class="bookmarkAddress">' + address + '</span>' +
         '<input id=' + _id + ' class="deleteButton" type="button" value="Delete">' +
         '</div>' +
         '<hr>');

@@ -10,6 +10,9 @@ function deleteWidget() {
             $(deleteDialogHtml).appendTo(document.body);
 
             $("#dialog-delete").dialog({
+                close: function() {
+                    $(this).remove();
+                },
                 buttons: [
                     {
                         text:"Yes",

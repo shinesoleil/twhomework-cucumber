@@ -9,9 +9,8 @@
 #### client side
 (bookmarks.json: name and email)
 
-* css
 * improve project structure
-* find and fix bugs
+* pagination bugs
 
 #### server side
 * done, to be reviewed
