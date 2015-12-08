@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/bookmarks');
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 
-//TODO: populate database with bookmarks.json
+//populate database with bookmarks.json
 require('./api/bookmark/seed');
 
 //setup server

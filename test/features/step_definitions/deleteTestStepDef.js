@@ -9,13 +9,13 @@ var searchBookmarkTest = function() {
         return promise;
     });
 
-    this.Given(/^add button clicked$/, function() {
+    this.Given(/^one delete button clicked$/, function() {
         var promise = this.driver.findElement({id: 'addButton'}).click();
         this.driver.sleep(1000);
         return promise;
     });
 
-    this.When(/^fill in the form with "([^"]*)" and "([^"]*)"$/, function (bookmarkName, bookmarkAddress) {
+    this.When(/^click Yes$/, function (bookmarkName, bookmarkAddress) {
         this.driver
             .findElement({id: 'newBookmarkName'})
             .sendKeys(bookmarkName);
@@ -26,7 +26,7 @@ var searchBookmarkTest = function() {
         return promise;
     });
 
-    this.Then(/^"([^"]*)" found in the bookmarks list$/, function (itemNumber, next) {
+    this.Then(/^bookmarks number - 1$/, function (itemNumber, next) {
         this.driver.sleep(1000);
         this.driver.findElements({className: 'bookmarkName'}).
             then(function(elements) {

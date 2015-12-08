@@ -19,6 +19,7 @@ function addWidget() {
                 buttons: [
                     {
                         text:"Add",
+                        id: "addButton",
                         click: function() {
                             var newBookmarkName = $("#newBookmarkName").val();
                             var newBookmarkAddress = $("#newBookmarkAddress").val();
