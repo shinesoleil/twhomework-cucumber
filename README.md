@@ -18,7 +18,7 @@
 4. Open the following webpage:
 > http://localhost:8080/page
 
-5. Go to "test" folder and rum the folowing command to test the application:
+5. Go to "test" folder and run the folowing command to test the application:
 > cucumber.js
 
 ## TODO：
