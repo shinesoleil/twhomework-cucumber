@@ -13,7 +13,7 @@ function refresh(text) {
             '</div>');
 
         $('#resultNumber').remove();
-        $("#inputDiv").append('<span id="resultNumber">' + bookmarkNumber + ' bookmarks found</span>');
+        $("#inputDiv").append('<p id="resultNumber">' + bookmarkNumber + ' bookmarks found</p>');
 
         $.getJSON('http://localhost:8080/api/bookmarks?text=' + text + '&page=1', function(data) {
             var bookmarks = data;
