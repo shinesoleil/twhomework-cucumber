@@ -27,10 +27,7 @@
 * use gulp to manage tasks 
 
 #### client side
-(bookmarks.json: name and email)
-
 * improve project structure
-* pagination bugs
 
 #### server side
 * done, to be reviewed
