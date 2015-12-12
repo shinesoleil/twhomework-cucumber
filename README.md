@@ -5,6 +5,7 @@
 * server-side: Express.js
 * database: MongoDB
 * test: Cucumber.js
+* unit-test: jasmine-node
 
 ## Usage:
 
@@ -34,6 +35,7 @@
 
 #### test with cucumber
 * done, to be reviewed
+* pay attention to asynchronous testing
 
 
 
