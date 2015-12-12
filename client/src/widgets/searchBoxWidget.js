@@ -1,5 +1,6 @@
 function searchBox() {
-    $("#input").on("change keyup paste",function() {
+    //"change keyup paste --> keyup paste"
+    $("#input").on("keyup paste",function() {
         refresh($(this).val());
     });
 }

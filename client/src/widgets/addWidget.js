@@ -40,7 +40,7 @@ function addWidget() {
                     }
                 ]
             });
-            event.preventDefault(); //???
+            //event.preventDefault(); //???
     });
 }
 
