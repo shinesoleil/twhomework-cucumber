@@ -16,6 +16,7 @@ function deleteWidget() {
                 buttons: [
                     {
                         text:"Yes",
+                        id: "deleteConfirmButton",
                         click: function() {
                             $.ajax({
                                 url: "http://localhost:8080/api/bookmarks" + "?_id=" + _idBookmarkToBeDeleted,

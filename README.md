@@ -33,8 +33,7 @@
 * done, to be reviewed
 
 #### test with cucumber
-* test add bookmark
-* test delete bookmark
+* done, to be reviewed
 
 
 

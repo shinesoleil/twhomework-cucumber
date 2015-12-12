@@ -8,17 +8,16 @@ Feature: This is the cucumber test feature
     When I input "non"
     Then there are 3 bookmarks found
 
-#  Scenario: Add bookmarks test
-#    Given homepage opened
-#    Given add button clicked
-#    When fill in the form with "testName" and "testAddress"
-#    Then "testName" found in the bookmarks list
-#
-#
-#  Scenario: Delete bookmarks test
-#    Given homepage opened
-#    Given one delete button clicked
-#    When click Yes
-#    Then bookmarks number - 1
+  Scenario: Add bookmarks test
+    Given homepage opened for add test
+    Given add button clicked
+    When fill in the form with "testName" and "testAddress"
+    Then 73 bookmarks found after add
+
+  Scenario: Delete bookmarks test
+    Given homepage opened for delete test
+    Given one delete button clicked
+    When click Yes
+    Then 72 bookmarks found after delete
 
 

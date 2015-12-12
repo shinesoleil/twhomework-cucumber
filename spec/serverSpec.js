@@ -11,7 +11,7 @@ describe("bookmark server", function() {
       });
     });
 
-    describe("GET /api/bookmarks", function() {
+    /*describe("GET /api/bookmarks", function() {
         it("returns bookmarks number in json", function(done) {
             request.get("http://localhost:8080/api/bookmarks", function(error, res, body) {
                 var bookmarks = JSON.parse(body);
@@ -19,5 +19,5 @@ describe("bookmark server", function() {
                 done();
             });
         });
-    });
+    });*/
 });

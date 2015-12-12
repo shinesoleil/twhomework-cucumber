@@ -3,27 +3,30 @@ var assert = require('assert');
 var addBookmarkTest = function() {
     this.World = require('../support/world.js').World;
 
-    this.Given(/^my homework web$/,{timeout:20*1000} , function() {
-        var promise = this.driver.get('http://baidu.com');
-        this.driver.sleep(1000);
+    this.Given(/^my homework web page$/,{timeout:20*1000} , function() {
+        var promise = this.driver.get('http://localhost:8080/page');
         return promise;
     });
 
-    this.When(/^I inputs "([^"]*)"$/, function (text) {
+
+    this.When(/^I input "([^"]*)"$/, function (text) {
         var promise = this.driver
             .findElement({id: 'input'})
             .sendKeys(text);
+        this.driver.sleep(2000);
         return promise;
     });
 
-    this.Then(/^there is (\d+) bookmarks found/, function (itemNumber, next) {
-        this.driver.sleep(1000);
-        this.driver.findElements({className: 'bookmarkName'}).
+    this.Then(/^there are (\d+) bookmarks found$/, function (itemNumber) {
+        var promise = this.driver.findElements({className: 'bookmarkName'}).
             then(function(elements) {
+                console.log(elements.length);
                 assert.equal(elements.length, itemNumber);
-                next();
+
             });
+        return promise;
     });
+
 };
 
 module.exports = addBookmarkTest;

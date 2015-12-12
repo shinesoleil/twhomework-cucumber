@@ -3,9 +3,8 @@ var assert = require('assert');
 var searchBookmarkTest = function() {
     this.World = require('../support/world.js').World;
 
-    this.Given(/^homepage opened$/,{timeout:20*1000} , function() {
+    this.Given(/^homepage opened for add test$/,{timeout:20*1000} , function() {
         var promise = this.driver.get('http://localhost:8080/page');
-        this.driver.sleep(1000);
         return promise;
     });
 
@@ -22,18 +21,22 @@ var searchBookmarkTest = function() {
         this.driver
             .findElement({id: 'newBookmarkAddress'})
             .sendKeys(bookmarkAddress);
-        var promise = this.driver.findElement({id: 'addButton'}).click();
+        var promise = this.driver.findElement({id: 'addConfirmButton'}).click();
+        this.driver.sleep(1000);
         return promise;
     });
 
-    this.Then(/^"([^"]*)" found in the bookmarks list$/, function (itemNumber, next) {
-        this.driver.sleep(1000);
-        this.driver.findElements({className: 'bookmarkName'}).
-            then(function(elements) {
-                console.log(elements.length);
-                next();
+
+    this.Then(/^(\d+) bookmarks found after add$/, function (itemNumber) {
+        var promise =  this.driver.findElement({id: 'resultNumber'})
+            .getText()
+            .then(function(text) {
+                assert.equal(text.split(" ")[0], itemNumber);
             });
+        this.driver.sleep(1000);
+        return promise;
     });
+
 };
 
 module.exports = searchBookmarkTest;
