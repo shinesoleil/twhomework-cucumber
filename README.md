@@ -13,13 +13,14 @@
 2. In the home directory, run npm command to install dependencies:
 > npm install
 
-3. Go to "server" folder and run the following command:
-> node app.js
+3. Run the following command to start the server:
+> node ./server/app.js
 
 4. Open the following webpage:
 > http://localhost:8080/page
 
-5. Go to "test" folder and run the folowing command to test the application:
+5. Run the folowing command to test the application:
+> cd test
 > cucumber.js
 
 ## TODO：
