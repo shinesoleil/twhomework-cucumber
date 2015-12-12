@@ -31,7 +31,7 @@
 * improve project structure
 
 #### server side
-* done, to be reviewed
+* add unit test
 
 #### test with cucumber
 * done, to be reviewed
